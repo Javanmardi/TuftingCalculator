@@ -60,4 +60,6 @@ if __name__ == "__main__":
             pile_type = "Cut"
         tuft_weight = calculate_tuft_weight(ga, st, pl, den, pile_type)
         print(f"\nTufting carpet weight = {math.ceil(tuft_weight)} gram")
+        print("\nThank you for using the Tufting Carpet Weight Calculator.")
+        print("Visit https://github.com/Javanmardi/TuftingCalculator for updates and source code.")
 
