@@ -61,7 +61,7 @@ def show_about():
     about_window.resizable(False, False)
 
     ttk.Label(about_window, text="Tufting Carpet Weight Calculator", font=("Segoe UI", 10, "bold")).pack(pady=(10, 5))
-    ttk.Label(about_window, text="Created by Behrouz").pack()
+    ttk.Label(about_window, text="Created by Behrouz Javanmardi").pack()
     ttk.Label(about_window, text="Special thanks to Dr. Mohsen Bahador").pack(pady=(2, 5))
 
     # Clickable email label
