@@ -1,3 +1,12 @@
+"""
+Tufting Carpet Weight Calculator (CLI Version)
+Author: Behrouz Javanmardi
+Formula: Dr. Mohsen Bahador
+GitHub: https://github.com/Javanmardi/TuftingCalculator
+License: MIT
+Version: 1.0.0
+"""
+
 import argparse
 from fractions import Fraction
 import math
@@ -75,4 +84,5 @@ if __name__ == "__main__":
         print(f"\nTufting carpet weight = {tuft_weight} gram")
         print("\nThank you for using the Tufting Carpet Weight Calculator.")
         print("Visit https://github.com/Javanmardi/TuftingCalculator for updates and source code.")
+
 
