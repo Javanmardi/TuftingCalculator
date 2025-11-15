@@ -30,8 +30,13 @@ if __name__ == "__main__":
     parser.add_argument("--pile", type=str, help="Pile height (mm)")
     parser.add_argument("--den", type=str, help="Yarn denier (den)")
     parser.add_argument("--piletype", type=str, choices=["Cut", "Loop"], help="Pile type (Cut or Loop)")
+    parser.add_argument('--about', action='store_true', help="Show author and license info")
 
     args = parser.parse_args()
+
+    if args.about:
+        print("Tufting Carpet Weight Calculator\nAuthor: Behrouz Javanmardi\nGitHub: https://github.com/Javanmardi/TuftingCalculator\nLicense: MIT\nVersion: 1.0.0")
+        exit()
 
     if args.gauge and args.stitch and args.pile and args.den and args.piletype:
         # Command-line mode
@@ -41,7 +46,7 @@ if __name__ == "__main__":
         den = parse_number(args.den)
         pile_type = args.piletype
         tuft_weight = calculate_tuft_weight(ga, st, pl, den, pile_type)
-        print(f"\nTufting carpet weight = {math.ceil(tuft_weight)} gram (rounded up)")
+        print(f"\nTufting carpet weight = {math.ceil(tuft_weight)} gram")
     else:
         # Interactive mode
         print("Tufting Carpet Weight Calculator (Interactive Mode)\n")
@@ -55,5 +60,4 @@ if __name__ == "__main__":
             pile_type = "Cut"
         tuft_weight = calculate_tuft_weight(ga, st, pl, den, pile_type)
         print(f"\nTufting carpet weight = {math.ceil(tuft_weight)} gram")
-
 
