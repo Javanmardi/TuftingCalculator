@@ -61,14 +61,14 @@ def show_about():
     about_window.resizable(False, False)
 
     ttk.Label(about_window, text="Tufting Carpet Weight Calculator", font=("Segoe UI", 10, "bold")).pack(pady=(10, 5))
-    ttk.Label(about_window, text="Created by Behrouz").pack()
+    ttk.Label(about_window, text="Created by Behrouz Javanmardi").pack()
     ttk.Label(about_window, text="Special thanks to Dr. Mohsen Bahador").pack(pady=(2, 5))
 
     # Clickable email label
     def open_email():
-        webbrowser.open("mailto:behrouz@example.com")
+        webbrowser.open("mailto:behrouz@javanmardi.org")
 
-    email_label = tk.Label(about_window, text="behrouz@example.com", font=("Consolas", 9), fg="blue", cursor="hand2")
+    email_label = tk.Label(about_window, text="behrouz@javanmardi.org", font=("Consolas", 9), fg="blue", cursor="hand2")
     email_label.pack()
     email_label.bind("<Button-1>", lambda e: open_email())
 
