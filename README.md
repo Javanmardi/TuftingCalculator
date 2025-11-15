@@ -32,7 +32,7 @@ Where:
 
 ## 🛠️ Installation
 
-Clone the repository:
+1. Clone the repository:
 ```bash
 git clone https://github.com/Javanmardi/TuftingCalculator.git
 cd TuftingCalculator
@@ -45,7 +45,7 @@ python tuft_weight.py
 
 2. Command Line Arguments
 ```bash
-python tuft_cli.py --gauge 1/8 --stitch 32 --pile 10.0 --den 3400 --
+python tuft_cli.py --gauge 1/8 --stitch 32 --pile 10 --den 3400 --piletype Cut
 ```
 
 3. GUI Mode
