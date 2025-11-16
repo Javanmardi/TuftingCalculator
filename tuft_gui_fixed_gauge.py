@@ -1,9 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter import messagebox
+# from tkinter import messagebox
 from fractions import Fraction
 import math
-from tkinter import messagebox
 import webbrowser
 
 def calculate_tuft_weight(ga, st, pl, den, pile_type):
@@ -131,3 +130,4 @@ result_label = ttk.Label(root, textvariable=result_var, foreground="blue")
 result_label.grid(row=6, column=0, columnspan=2, pady=10)
 
 root.mainloop()
+
