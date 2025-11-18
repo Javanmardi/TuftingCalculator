@@ -84,5 +84,7 @@ if __name__ == "__main__":
         print(f"\nTufting carpet weight = {tuft_weight} gram")
         print("\nThank you for using the Tufting Carpet Weight Calculator.")
         print("Visit https://github.com/Javanmardi/TuftingCalculator for updates and source code.")
+        input("Press any key to exit...")
+
 
 
