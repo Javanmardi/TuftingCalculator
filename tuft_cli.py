@@ -70,7 +70,7 @@ if __name__ == "__main__":
         pile_type = validate_pile_type(args.piletype)
 
         tuft_weight = calculate_tuft_weight(ga, st, pl, den, pile_type)
-        print(f"\nTufting carpet weight = {tuft_weight} gram")
+        print(f"\nTufting carpet weight = {tuft_weight} gram/m\u00b2")
     else:
         # Interactive mode
         # ga, st, pl, den, pile_type = prompt_interactive()
@@ -81,10 +81,11 @@ if __name__ == "__main__":
         den = parse_number(input("Enter yarn denier (den): "))
         pile_type = validate_pile_type(input("Enter pile type (Cut or Loop): ").strip())
         tuft_weight = calculate_tuft_weight(ga, st, pl, den, pile_type)
-        print(f"\nTufting carpet weight = {tuft_weight} gram")
+        print(f"\nTufting carpet weight = {tuft_weight} gram/m\u00b2")
         print("\nThank you for using the Tufting Carpet Weight Calculator.")
         print("Visit https://github.com/Javanmardi/TuftingCalculator for updates and source code.")
         input("Press any key to exit...")
+
 
 
 
