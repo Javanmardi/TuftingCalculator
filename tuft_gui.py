@@ -35,7 +35,7 @@ def on_calculate():
         pile_type = pile_type_var.get()
         
         tuft_weight = calculate_tuft_weight(ga, st, pl, den, pile_type)
-        result_var.set(f"Tufting carpet weight = {tuft_weight}")
+        result_var.set(f"Tufting carpet weight = {tuft_weight} gram/m\u00b2")
     except Exception:
         result_var.set("Please enter valid numeric or fraction values.")
 
@@ -126,4 +126,5 @@ result_label.grid(row=6, column=0, columnspan=2, pady=10)
 
 # Run the GUI loop
 root.mainloop()
+
 
