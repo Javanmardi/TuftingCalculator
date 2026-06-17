@@ -16,9 +16,9 @@ def calculate_tuft_weight(ga, st, pl, den, pile_type):
     Calculate tufting carpet weight based on pile type.
     """
     if pile_type.lower() == "cut":
-        tuft = (1/ga) * (1000/25.4) * st * 10 * ((pl * 2) + (10/st)) * 0.001 * (den / 9000)
+        tuft = (1/ga) * (1000/25.4) * st * 10 * ((pl * 2) + (100/st)) * 0.001 * (den / 9000)
     else:  # loop
-        tuft = (1/ga) * (1000/25.4) * st * 10 * ((pl * 2) + (20/st)) * 0.001 * (den / 9000)
+        tuft = (1/ga) * (1000/25.4) * st * 10 * ((pl * 2) + (200/st)) * 0.001 * (den / 9000)
     
     # Round up to next integer
     return math.ceil(tuft)
