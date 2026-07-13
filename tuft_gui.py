@@ -5,14 +5,14 @@ from fractions import Fraction
 import math
 import webbrowser
 
-def calculate_tuft_weight(ga, st, pl, den, pile_type):
+def calculate_tuft_weight(gauge, stitch, pile, den, pile_type):
     """
     Calculate tufting carpet weight depending on pile type (loop or cut).
     """
     if pile_type == "Cut":
-        tuft = (1/ga) * (1000/25.4) * st * 10 * ((pl * 2) + (100/st)) * 0.001 * (den / 9000)
+        tuft = (1/gauge) * (1000/25.4) * stitch * 10 * ((pile * 2) + (100/stitch)) * 0.001 * (den / 9000)
     else:  # Loop
-        tuft = (1/ga) * (1000/25.4) * st * 10 * ((pl * 2) + (200/st)) * 0.001 * (den / 9000)
+        tuft = (1/gauge) * (1000/25.4) * stitch * 10 * ((pile * 2) + (200/stitch)) * 0.001 * (den / 9000)
     
     # Round up to next integer
     return math.ceil(tuft)
@@ -28,22 +28,22 @@ def parse_number(value):
 
 def on_calculate():
     try:
-        ga = parse_number(entry_ga.get())
-        st = parse_number(entry_st.get())
-        pl = parse_number(entry_pl.get())
+        gauge = parse_number(entry_gauge.get())
+        stitch = parse_number(entry_stitch.get())
+        pile = parse_number(entry_pile.get())
         den = parse_number(entry_den.get())
         pile_type = pile_type_var.get()
         
-        tuft_weight = calculate_tuft_weight(ga, st, pl, den, pile_type)
+        tuft_weight = calculate_tuft_weight(gauge, stitch, pile, den, pile_type)
         result_var.set(f"Tufting carpet weight = {tuft_weight} gram/m\u00b2")
     except Exception:
         result_var.set("Please enter valid numeric or fraction values.")
 
 def on_reset():
     # Clear all entry fields
-    entry_ga.delete(0, tk.END)
-    entry_st.delete(0, tk.END)
-    entry_pl.delete(0, tk.END)
+    entry_gauge.delete(0, tk.END)
+    entry_stitch.delete(0, tk.END)
+    entry_pile.delete(0, tk.END)
     entry_den.delete(0, tk.END)
     pile_type_var.set("Cut")  # reset to default
     # Clear result label
@@ -91,16 +91,16 @@ root.config(menu=menu_bar)
 
 # Input fields
 ttk.Label(root, text="Gauge (inch):").grid(row=0, column=0, padx=5, pady=5, sticky="e")
-entry_ga = ttk.Entry(root)
-entry_ga.grid(row=0, column=1, padx=5, pady=5)
+entry_gauge = ttk.Entry(root)
+entry_gauge.grid(row=0, column=1, padx=5, pady=5)
 
 ttk.Label(root, text="Stitch rate (per dm):").grid(row=1, column=0, padx=5, pady=5, sticky="e")
-entry_st = ttk.Entry(root)
-entry_st.grid(row=1, column=1, padx=5, pady=5)
+entry_stitch = ttk.Entry(root)
+entry_stitch.grid(row=1, column=1, padx=5, pady=5)
 
 ttk.Label(root, text="Pile height (mm):").grid(row=2, column=0, padx=5, pady=5, sticky="e")
-entry_pl = ttk.Entry(root)
-entry_pl.grid(row=2, column=1, padx=5, pady=5)
+entry_pile = ttk.Entry(root)
+entry_pile.grid(row=2, column=1, padx=5, pady=5)
 
 ttk.Label(root, text="Yarn denier (den):").grid(row=3, column=0, padx=5, pady=5, sticky="e")
 entry_den = ttk.Entry(root)
