@@ -2,9 +2,10 @@
 Tufting Carpet Weight Calculator (CLI Version)
 Author: Behrouz Javanmardi
 Formula: Dr. Mohsen Bahador
+Thanks to: Mr. Mohammad Taghi Zyia
 GitHub: https://github.com/Javanmardi/TuftingCalculator
 License: MIT
-Version: 1.0.0
+Version: 1.5
 """
 
 import argparse
