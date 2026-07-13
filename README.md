@@ -53,6 +53,10 @@ python tuft_cli.py --gauge 1/8 --stitch 32 --pile 10 --den 3400 --piletype Cut
 python tuft_gui.py
 ```
 
+## Acknowledgement
+
+I express my sincere gratitude to **Dr. Mohsen Bahador** and **Mr. Mohammad Taghi Zyia** for their valuable guidance and support during the development of the tufting calculator project. Their expertise and contributions played an important role in shaping the direction and quality of this work.
+
 ## License
 This project is licensed under the MIT License — feel free to use, modify, and share.
 
