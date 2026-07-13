@@ -61,7 +61,8 @@ def show_about():
 
     ttk.Label(about_window, text="Tufting Carpet Weight Calculator", font=("Segoe UI", 10, "bold")).pack(pady=(10, 5))
     ttk.Label(about_window, text="Created by Behrouz Javanmardi").pack()
-    ttk.Label(about_window, text="Special thanks to Dr. Mohsen Bahador").pack(pady=(2, 5))
+    ttk.Label(about_window, text="Special thanks to Dr. Mohsen Bahador").pack(pady=(2, 0))
+    ttk.Label(about_window, text="& Mr. Mohammad Taghi Zyia").pack(pady=(0, 5))
 
     # Clickable email label
     def open_email():
@@ -72,7 +73,7 @@ def show_about():
     email_label.bind("<Button-1>", lambda e: open_email())
 
     ttk.Label(about_window, text="License: MIT").pack()
-    ttk.Label(about_window, text="Version: 1.0.0").pack(pady=(0, 10))
+    ttk.Label(about_window, text="Version: 1.5").pack(pady=(0, 10))
 
     ttk.Label(about_window, text="GitHub:").pack()
 
