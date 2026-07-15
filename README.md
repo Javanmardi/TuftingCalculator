@@ -9,7 +9,7 @@ This project includes both **command-line** and **GUI (Tkinter)** interfaces, ma
 
 The tufting carpet weight is calculated using the formula:
 
-tuft = (1/gauge) × (1000/25.4) × stitch × 10 × ((pile × 2) + (10/stitch)) × 0.001 × (den/9000)
+tuft = (1/gauge) × (1000/25.4) × stitch × 10 × ((pile × 2) + (100/stitch)) × 0.001 × (den/9000)
 
 Where:
 - `gauge` → Gauge (inch) 
